@@ -10,7 +10,7 @@ function ListNode(value, next) {
 // Space complexity is Big O(1);
 function kthLst(head, k) {
     if (head == null) {
-        return null;
+        return 0;
     }
     let counter = 0;
     let current = head;

@@ -7,6 +7,7 @@ let wrongType1 = [['ef'], 'fe']
 let wrongType2 = [{u: 's'}, 'su']
 let emptyStr = ['', 'a']
 
+//time O(n), space O(length)
 function checkPermutation(str1, str2) {
   if (str1.length === 0 || str2.length === 0) return -1
   if (typeof str1 !== 'string' || typeof str2 !== 'string') return -1

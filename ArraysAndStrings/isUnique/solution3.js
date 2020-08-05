@@ -1,5 +1,6 @@
 //Implement am algorithm to determine if a string has all unique characters
 
+// if allowed using additional data structure
 // sorting the string improves time complexity at the cost of space complexity
 // time complexity Big O(N*log(N))
 // space complexity Big O(N)

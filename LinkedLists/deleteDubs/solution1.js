@@ -63,5 +63,6 @@ let head1 = new ListNode(99,
         )
     )
 )
+
 printValues(removeDubs(head)); // [ 12, 99, 37, 32 ]
 printValues(removeDubs(head1)); // [ 99, 37, 32 ]

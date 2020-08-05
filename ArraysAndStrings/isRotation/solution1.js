@@ -2,7 +2,7 @@
 // substring - a rotation of another word
 
 // Time complexity Big O(N);
-// Space complexity Big O(N);
+// Space complexity Big O(N) because it creates a new string (str2 + str2)
 function isRotation(str1, str2) {
     if (str1.length != str2.length) {
         return false;

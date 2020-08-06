@@ -13,23 +13,21 @@ let tooManyRepeatsTrue = 'aaccc'
 //time O(n), space O(n)
 function palendromePermutation(str) {
   if (str.length === 0) return -1
-  let spaceRegex = /\s/g
-  let nonAlphaRegex = /[^a-z]/gi
-  str = str.replace(spaceRegex, '').replace(nonAlphaRegex, '').toLowerCase()
   let strHash = {}
-  for (let letter of str){
-      strHash[letter] ? strHash[letter]++ : strHash[letter] = 1
+  for (let letter of str) {
+    if (letter < 10 || letter.toLowerCase() === letter.toUpperCase()) continue
+    strHash[letter]
+      ? strHash[letter.toLowerCase()]++
+      : (strHash[letter.toLowerCase()] = 1)
   }
   endingValues = Object.values(strHash)
   let numOdd = 0
-  for (let item of endingValues){
-      if (item % 2 !== 0) numOdd++
-      if (numOdd > 1) return false
+  for (let item of endingValues) {
+    if (item % 2 !== 0) numOdd++
+    if (numOdd > 1) return false
   }
   return true
 }
-
-
 
 console.group('palendromePermutation quick tests')
 console.log(palendromePermutation(yesP)) //true

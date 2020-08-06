@@ -24,7 +24,6 @@ function kthLst(head, k) {
   return p2;
 }
 
-
 let head = new ListNode(1,
     new ListNode(2,
         new ListNode(3,

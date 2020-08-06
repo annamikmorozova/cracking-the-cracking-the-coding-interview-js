@@ -6,7 +6,6 @@ function ListNode(value, next) {
     this.next = next;
 }
 
-
 // Time complexity is Big O(N);
 // Space complexity is Big O(N) because we are collecting a stack of recursive calls;
 function kthLastRecursion(head, k) {

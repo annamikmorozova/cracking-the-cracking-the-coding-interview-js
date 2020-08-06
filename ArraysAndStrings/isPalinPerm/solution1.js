@@ -1,6 +1,7 @@
 // Check if a given string can be a permutation and a palindrome
 // Palindrome is a string that is the same backwards "aca" or "abbc"
 // Permutation is a rearrangement of letters
+// a string can only include letters and its not case sensitive
 
 // Time Complexity is Big O(N);
 // For Space complexity the hash map will get as big as 
@@ -36,5 +37,5 @@ function isPalinPerm(string) {
 
 console.log(isPalinPerm("I am not a palindrome")); // false
 console.log(isPalinPerm("Race car")); // true
-console.log(isPalinPerm("Anna!?")); // false
+console.log(isPalinPerm("Anna")); // true
 console.log(isPalinPerm("Cota toc")); // true

@@ -26,7 +26,7 @@ function addLists(l1, l2) {
     if (l1 == null && l2 == null) {
         return null;
     }
-    addListsHelper(l1, l2, 0);
+    return addListsHelper(l1, l2, 0);
 }
 
 function addListsHelper(l1, l2, carry) {

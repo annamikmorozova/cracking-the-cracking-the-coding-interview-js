@@ -23,18 +23,18 @@ function printValues(head) {
 // Time complexity is Big O(N);
 // Space complexity is Big O(N) because are making a stack with recursive calls;
 function addLists(l1, l2) {
-    if (l1 == null && l2 == null) {
-        return null;
-    }
     return addListsHelper(l1, l2, 0);
 }
 
 function addListsHelper(l1, l2, carry) {
+    if (l1 == null && l2 == null && carry == 0) {
+        return null;
+    }
     let value = carry;
     value += l1 ? l1.value : 0;
     value += l2 ? l2.value : 0;
     const node = new ListNode(value % 10);
-    node.next = addLists(
+    node.next = addListsHelper(
         l1 ? l1.next : null,
         l2 ? l2.next : null,
         value >= 10 ? 1 : 0)

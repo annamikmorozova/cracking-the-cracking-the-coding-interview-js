@@ -21,7 +21,7 @@ function printValues(head) {
 }
 
 // Time complexity is Big O(N);
-// Space complexity is Big O(N) because are making a stack with recursive calls;
+// Space complexity is Big O(N) because we are making a stack with recursive calls;
 function addLists(l1, l2) {
     return addListsHelper(l1, l2, 0);
 }

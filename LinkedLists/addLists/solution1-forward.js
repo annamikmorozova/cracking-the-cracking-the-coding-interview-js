@@ -116,6 +116,18 @@ let l6 = new ListNode(9,
     )
 )
 
+let l7 = new ListNode(null)
+
+let l8 = new ListNode(9,
+    new ListNode(9,
+        new ListNode(9,
+            new ListNode(9, 
+            )
+        )
+    )
+)
+
 printValues(addLists(l1, l2)); // [1, 3, 0, 8]
 printValues(addLists(l3, l4)); // [1, 8, 0, 1]
 printValues(addLists(l5, l6)); // [1, 0, 9, 9, 8]
+printValues(addLists(l7, l8)); // [9, 9, 9, 9]

@@ -116,6 +116,6 @@ let l6 = new ListNode(9,
     )
 )
 
-printValues(addLists(l1, l2)); // [3, 0, 8]
-printValues(addLists(l3, l4)); // [3, 0, 8, 1]
+printValues(addLists(l1, l2)); // [1, 3, 0, 8]
+printValues(addLists(l3, l4)); // [1, 8, 0, 1]
 printValues(addLists(l5, l6)); // [1, 0, 9, 9, 8]

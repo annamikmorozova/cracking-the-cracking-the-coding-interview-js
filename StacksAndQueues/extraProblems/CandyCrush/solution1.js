@@ -50,6 +50,8 @@ class Stack {
 
 }
 
+// Time complexity is Big O(N);
+// Space complexity is Big O(N) because we are using stack as a data structure;
 function candyCrush(str) {
     let stack = new Stack();
     for (let i = 0; i < str.length; i++) {

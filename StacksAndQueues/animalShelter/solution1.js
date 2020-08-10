@@ -158,27 +158,27 @@ ac.enqueue("D1", "dog");
 ac.enqueue("C1", "cat");
 ac.enqueue("C2", "cat");
 ac.enqueue("D2", "dog");
-console.log(ac.printAnimals()); //ANIMALS [ 'D1', 'C1', 'C2', 'D2' ]
-console.log(ac.printCats()); // CATS [ 'C1', 'C2' ]
-console.log(ac.printDogs()); // DOGS [ 'D1', 'D2' ]
+ac.printAnimals(); //ANIMALS [ 'D1', 'C1', 'C2', 'D2' ]
+ac.printCats(); // CATS [ 'C1', 'C2' ]
+ac.printDogs(); // DOGS [ 'D1', 'D2' ]
 ac.dequeueDog();
 ac.dequeueDog();
-console.log(ac.printAnimals()); // ANIMALS ['C1', 'C2']
+ac.printAnimals(); // ANIMALS ['C1', 'C2']
+ac.dequeueCat(); 
 ac.dequeueCat();
-ac.dequeueCat();
-console.log(ac.printAnimals()); // []
+ac.printAnimals(); // []
 ac.enqueue("D1", "dog");
-console.log(ac.printAnimals()); // ['D1']
-console.log(ac.printCats()) // // []
-console.log(ac.printDogs()) // ['D1']
+ac.printAnimals(); // ['D1']
+ac.printCats(); // // []
+ac.printDogs(); // ['D1']
 ac.enqueue("C5", "cat");
 ac.enqueue("C6", "cat");
 ac.enqueue("C7", "cat");
 ac.enqueue("D2", "dog");
-console.log(ac.printAnimals()); //ANIMALS [ 'D1', 'C5', 'C6', 'C7', 'D2' ]
-console.log(ac.printCats()); // CATS [ 'C5', 'C6', 'C7' ]
-console.log(ac.printDogs()); // DOGS [ 'D1', 'D2' ]
+ac.printAnimals(); //ANIMALS [ 'D1', 'C5', 'C6', 'C7', 'D2' ]
+ac.printCats(); // CATS [ 'C5', 'C6', 'C7' ]
+ac.printDogs(); // DOGS [ 'D1', 'D2' ]
 ac.dequeueAny();
-console.log(ac.printAnimals()); // ANIMALS [ 'C5', 'C6', 'C7', 'D2' ]
+ac.printAnimals(); // ANIMALS [ 'C5', 'C6', 'C7', 'D2' ]
 ac.dequeueAny();
-console.log(ac.printAnimals()); // ANIMALS [ 'C6', 'C7', 'D2' ]
+ac.printAnimals(); // ANIMALS [ 'C6', 'C7', 'D2' ]

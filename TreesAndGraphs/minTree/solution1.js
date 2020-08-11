@@ -13,25 +13,19 @@ class Node {
 // Space complexity is Big O(N) because we are building nodes but
 // the largest the stack gets is Big O(log N);
 function minimalTree(array) {
-    let start = 0;
-    let end = array.length - 1;
-    if (array.length == 0) {
-        return null;
-    }
+    return createMinBST(array, 0, array.length - 1)
+}
 
-    function helper(array, start, end) {
+function createMinBST(array, start, end) {
+    if (end < start) {
+        return null;
+    } else {
         let mid = Math.floor((start + end) / 2);
-        if (start == end) {
-            return new Node(array[start]);
-        }
         let node = new Node(array[mid]);
-        if (mid !== start) {
-            node.left = helper(array, start, mid - 1);
-        }
-        node.right = helper(array, mid + 1, end);
+        node.left = createMinBST(array, start, mid - 1);
+        node.right = createMinBST(array, mid + 1, end);
         return node;
     }
-    return helper(array, start, end);
 }
 
 console.log(minimalTree([1, 2, 3]));

@@ -9,7 +9,7 @@ class Node {
 }
 
 // Time complexity is Big O(N);
-// Space complexity is Big O(log N) because we are building a stack;
+// Space complexity is Big O(log N) because we are building a stack of each subtree;
 function isBalanced(root) {
     let min;
     let max;

@@ -97,6 +97,32 @@ let tree3 = new Node(5,
     )
 );
 
-console.log(createLevelLinkedList(tree1));
-console.log(createLevelLinkedList(tree2));
-console.log(createLevelLinkedList(tree3));
+printHelper(createLevelLinkedList(tree1));
+// [ 10 ]
+// [ 3, 25 ]
+// [ -1, 5, 22, 30 ]
+printHelper(createLevelLinkedList(tree2));
+// [ 5 ]
+// [ 3, 15 ]
+// [ 1, 4, 13, 25 ]
+// [ null, 31 ]
+printHelper(createLevelLinkedList(tree3));
+//[ 5 ]
+// [ 3, 15 ]
+// [ 4, 13, 25 ]
+// [ 31 ]
+
+function printHelper(array) {
+    array.forEach(head => {
+        console.log(printLinkedList(head))
+    });
+};
+
+
+function printLinkedList(head) {
+    let array = [];
+    for (let temp = head; temp != null; temp = temp.next) {
+        array.push(temp.value.value);
+    }
+    return array;
+}

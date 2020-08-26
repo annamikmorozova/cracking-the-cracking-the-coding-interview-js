@@ -1,7 +1,7 @@
 // if an element in an MxN matrix is 0, set its entire row and column to 0
 // assume all rows are of same length & all columns are of same length
 // assume all elements are non-null integers
-// sidenote on datetype: in Java, int is a primitive type and so a new int[] will throw an error if any of its value is null; while Integer is an object wrapper of int and so new Integer[] can include null. so line 13 wouldn't throw an error if implemented in another language (at least Java that I know of), which doesn't matter in Javascript anyway
+// sidenote on datatype: in Java, int is a primitive type and so a new int[] will throw an error if any of its value is null; while Integer is an object wrapper of int and so new Integer[] can include null. so line 13 wouldn't throw an error if implemented in another language (at least Java that I know of), which doesn't matter in Javascript anyway
 
 // O(MxN) time, O(1) space
 function zeroMatrix(matrix) {

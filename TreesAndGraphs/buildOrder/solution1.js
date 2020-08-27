@@ -32,7 +32,7 @@ function topologicalSearch(deps, projects) {
   let visited = new Set();
   for (let i = 0; i < projects.length; i++) {
     let node = projects[i];
-    if (!visited.has(projects[i])) {
+    if (!visited.has(node)) {
       helper(node, visited, stack);
     }
   }

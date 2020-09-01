@@ -51,7 +51,8 @@ function rotateFour(matrix, n, row, col, direction) {
 console.log(rotateMatrix([
   [1,2,3],
   [4,5,6],
-  [7,8,9]]))
+  [7,8,9]]
+))
 // clockwise:
 // [ [ 7, 4, 1 ], [ 8, 5, 2 ], [ 9, 6, 3 ] ]
 // counter-clockwise:
@@ -62,7 +63,8 @@ console.log(rotateMatrix([
   [6, 7, 8, 9, 10],
   [11,12,13,14,15],
   [16,17,18,19,20],
-  [21,22,23,24,25]]))
+  [21,22,23,24,25]]
+))
 // clockwise:
 // [
 //   [ 21, 16, 11, 6, 1 ],
@@ -80,11 +82,12 @@ console.log(rotateMatrix([
 //   [ 1, 6, 11, 16, 21 ]
 // ]
 
-  console.log(rotateMatrix([
-    [1,2,7,4],
-    [5,2,7,8],
-    [9,1,4,5],
-    [9,4,6,1]]))
+console.log(rotateMatrix([
+  [1,2,7,4],
+  [5,2,7,8],
+  [9,1,4,5],
+  [9,4,6,1]]
+))
 // clockwise:
 // [ [ 9, 9, 5, 1 ], [ 4, 1, 2, 2 ], [ 6, 4, 7, 7 ], [ 1, 5, 8, 4 ] ]
 // counter-clockwise:

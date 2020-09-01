@@ -1,7 +1,8 @@
 // rotate NxN matrix 90 degrees in place
+// assume direction input can be either 'right' or 'left'
 // O(N**2) time, O(1) space
 
-function rotateMatrix(matrix) {
+function rotateMatrix(matrix, direction) {
   const n = matrix.length
   let depth = n / 2,
     row = 0,
@@ -10,7 +11,7 @@ function rotateMatrix(matrix) {
 
   while (row < depth) {
     for (let col = start; col < end; col++) {
-      matrix = rotateFour(matrix, n, row, col)
+      matrix = rotateFour(matrix, n, row, col, direction)
     }
     row++
     start++
@@ -20,26 +21,28 @@ function rotateMatrix(matrix) {
   return matrix
 }
 
-function rotateFour(matrix, n, row, col) {
+function rotateFour(matrix, n, row, col, direction) {
   let tmp = matrix[row][col]
 
-  // (option A) rotate clockwise
-  for (let i = 0; i < 3; i++) {
-    const prevRow = n - 1 - col
-    const prevCol = row
-    matrix[row][col] = matrix[prevRow][prevCol]
-    row = prevRow
-    col = prevCol
+  if (direction == 'right') {
+    // rotate clockwise
+    for (let i = 0; i < 3; i++) {
+      const prevRow = n - 1 - col
+      const prevCol = row
+      matrix[row][col] = matrix[prevRow][prevCol]
+      row = prevRow
+      col = prevCol
+    }
+  } else (direction == 'left') {
+    // rotate counter-clockwise
+    for (let i = 0; i < 3; i++) {
+      const nextRow = col
+      const nextCol = n - 1 - row
+      matrix[row][col] = matrix[nextRow][nextCol]
+      row = nextRow
+      col = nextCol
+    }
   }
-
-  // (option B) rotate counter-clockwise
-  // for (let i = 0; i < 3; i++) {
-  //   const nextRow = col
-  //   const nextCol = n - 1 - row
-  //   matrix[row][col] = matrix[nextRow][nextCol]
-  //   row = nextRow
-  //   col = nextCol
-  // }
 
   matrix[row][col] = tmp
   return matrix

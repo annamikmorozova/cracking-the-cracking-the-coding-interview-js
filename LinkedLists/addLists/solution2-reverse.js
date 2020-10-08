@@ -14,7 +14,8 @@ function ListNode(val, next) {
 
 // when digits are stored in reverse order
 function sumLists(l1, l2) {
-  let res = null;
+  let head = null;
+  let tail = null;
   let rollover = 0;
   let node1 = l1;
   let node2 = l2;
@@ -26,27 +27,30 @@ function sumLists(l1, l2) {
     rollover = Math.floor(sum / 10);
     sum %= 10;
 
-    const newNode = new ListNode(sum);
-    if (res) {
-      newNode.next = res;
+    let newNode = new ListNode(sum);
+    if (!head) {
+      head = newNode;
+      tail = head;
+    } else {
+      tail.next = newNode;
+      tail = tail.next;
     }
-    res = newNode;
 
     node1 = node1.next;
     node2 = node2.next;
   }
-  return res;
+  return head;
 }
 
 const example1L1 = new ListNode(7, new ListNode(1, new ListNode(6)));
 
 const example1L2 = new ListNode(5, new ListNode(9, new ListNode(2)));
 
-console.log(sumLists(example1L1, example1L2)); // 9-1-2
+console.log(sumLists(example1L1, example1L2)); // 2-1-9
 
 const example2L1 = new ListNode(7);
 const example2L2 = new ListNode(5);
 
-console.log(sumLists(example2L1, example2L2)); // 1-2
+console.log(sumLists(example2L1, example2L2)); // 2-1
 
 console.log(sumLists(null, example2L2)); // 5

@@ -1,6 +1,6 @@
 // implement a MyQueue class using two stacks
 // use one stack for enqueueing, use another stack for dequeueing
-// O(1) operation for each method
+// O(N) operation for all methods except isEmpty, where N is the length of the queue
 
 class MyQueue {
   constructor() {

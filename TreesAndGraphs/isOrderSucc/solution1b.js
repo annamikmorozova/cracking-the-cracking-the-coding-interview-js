@@ -1,5 +1,6 @@
-//  find the "next" node (i.e., in-order successor) of a given node in a binary search tree. you may assume that each node has a link to its parent.
+// find the "next" node (i.e., in-order successor) of a given node in a binary search tree. you may assume that each node has a link to its parent.
 // iterative solution
+// in-order
 // O(N) time since we may visit all nodes, O(1) space as we don't create new variables
 
 function Node(val, parent, left, right) {

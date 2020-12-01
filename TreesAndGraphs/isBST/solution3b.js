@@ -9,15 +9,16 @@ function Node(val, left, right) {
 }
 
 function isBST(root) {
-  if (!node) return true;
   let flag = true;
 
   function isWithin(node, min, max) {
+    if (!node) return;
+
     if (node.val > max || node.val < min) flag = false;
 
     if (flag) {
-      if (node.left) isWithin(node.left, min, node.val);
-      if (node.right) isWithin(node.right, node.val, max);
+      isWithin(node.left, min, node.val);
+      isWithin(node.right, node.val, max);
     }
   }
 

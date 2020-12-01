@@ -9,6 +9,7 @@ function Node(val, left, right) {
 }
 
 function isBST(root) {
+  if (!node) return true;
   let flag = true;
 
   function isWithin(node, min, max) {
